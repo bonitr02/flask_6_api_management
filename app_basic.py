@@ -11,9 +11,9 @@ def home():
 @app.route('/bg', methods =['GET'])
 def blood_glucose_average():
     
-    bg1 = request.args.get('bg1')
-    bg2 = request.args.get('bg2')
-    bg3 = request.args.get('bg3')
+    bg1 = request.args.get('bg1', "Please enter BG1 value again")
+    bg2 = request.args.get('bg2', "Please enter BG2 value again")
+    bg3 = request.args.get('bg3', "Please enter BG3 value again")
     
     bg1_real = int(bg1)
     bg2_real = int(bg2)
